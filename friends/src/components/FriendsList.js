@@ -13,7 +13,7 @@ const FriendsList = props => {
 
    return (
       <div>
-         {friends.map(friend => <div key={friend.id}>{friend.name}</div>)}
+         {friends.length > 0 ? (friends.map(friend => <div key={friend.id}>{friend.name}</div>)) : (<h3>Loading...</h3>)}
          <NewFriendForm />
       </div>
    )

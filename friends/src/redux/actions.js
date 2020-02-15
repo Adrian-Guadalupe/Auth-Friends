@@ -41,8 +41,8 @@ export const postNewFriend = friendToPost => dispatch => {
    axiosWithAuth()
       .post('http://localhost:5000/api/friends', friendToPost)
       .then(res => {
-         console.log(res)
-         dispatch({ type: UPDATE_FRIENDS, payload: res })
+         console.log(res.data)
+         dispatch({ type: UPDATE_FRIENDS, payload: res.data })
       })
       .catch(err => {
          console.log('error', err);

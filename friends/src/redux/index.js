@@ -37,7 +37,6 @@ const reducer = (state = initialState, action) => {
          return {
             ...state,
             isLoading: false,
-            friends: action.payload
          }
       default: return state
    }
