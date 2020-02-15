@@ -19,7 +19,7 @@ const reducer = (state = initialState, action) => {
       case GET_FRIENDS:
          return {
             ...state,
-            isLoading: true
+            isLoading: true,
          }
       case UPDATE_FRIENDS:
          return {
