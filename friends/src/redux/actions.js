@@ -7,14 +7,14 @@ export const UPDATE_FRIENDS = 'UPDATE_FRIENDS';
 export const SET_ERROR = 'SET_ERROR';
 export const POST_NEW_FRIEND = 'POST_NEW_FRIEND';
 
-export const login = (credentials) => dispatch => {
+export const login = (credentials, props) => dispatch => {
    dispatch({ type: LOGIN })
    axios
       .post('http://localhost:5000/api/login', credentials)
       .then(res => {
          console.log(res)
          localStorage.setItem('token', res.data.payload)
-         // props.history.push('/friends')
+         props.history.push('/friends')
       })
       .catch(err => {
          console.log('error', err);

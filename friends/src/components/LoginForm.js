@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { login } from '../redux/actions'
 
-const LoginForm = () => {
+const LoginForm = (props) => {
    const dispatch = useDispatch()
 
    const [credentials, setCredentials] = useState({
@@ -12,7 +12,7 @@ const LoginForm = () => {
 
    const handleSubmit = e => {
       e.preventDefault()
-      dispatch(login(credentials))
+      dispatch(login(credentials, props))
       setCredentials({
          username: '',
          password: ''
