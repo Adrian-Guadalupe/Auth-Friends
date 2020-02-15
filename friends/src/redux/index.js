@@ -1,8 +1,9 @@
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import { GET_FRIENDS, UPDATE_FRIENDS, SET_ERROR, POST_NEW_FRIEND } from './actions';
+import { LOGIN, GET_FRIENDS, UPDATE_FRIENDS, SET_ERROR, POST_NEW_FRIEND } from './actions';
 
 const initialState = {
+   isLoggedIn: false,
    friends: [],
    isLoading: false,
    error: ''
@@ -10,6 +11,11 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
    switch(action.type) {
+      case LOGIN:
+         return {
+            ...state,
+            isLoggedIn: true
+         }
       case GET_FRIENDS:
          return {
             ...state,

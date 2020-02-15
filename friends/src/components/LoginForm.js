@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { login } from '../redux/actions'
 
 const LoginForm = () => {
+   const dispatch = useDispatch()
+
    const [credentials, setCredentials] = useState({
       username: '',
       password: ''
@@ -8,6 +12,7 @@ const LoginForm = () => {
 
    const handleSubmit = e => {
       e.preventDefault()
+      dispatch(login(credentials))
       setCredentials({
          username: '',
          password: ''
