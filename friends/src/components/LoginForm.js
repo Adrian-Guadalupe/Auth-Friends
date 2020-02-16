@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { login } from '../redux/actions'
+import { formStyle, inputStyle, btnStyle } from '../styles/loginFormStyles'
 
 const LoginForm = (props) => {
    const dispatch = useDispatch()
@@ -27,13 +28,14 @@ const LoginForm = (props) => {
    }
 
    return (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={formStyle}>
          <input
             type='text'
             name='username'
             placeholder='Username'
             value={credentials.username}
             onChange={handleChange}
+            style={inputStyle}
          />
          <input
             type='password'
@@ -41,8 +43,9 @@ const LoginForm = (props) => {
             placeholder='Password'
             value={credentials.password}
             onChange={handleChange}
+            style={inputStyle}
          />
-         <button>Submit</button>
+         <button style={btnStyle}>Submit</button>
       </form>
    )
 }
