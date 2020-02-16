@@ -1,6 +1,6 @@
 export const formStyle = {
    borderRadius: '15px',
-   width: '25%',
+   width: '35%',
    paddingTop: '20px',
    paddingBottom: '20px',
    backgroundColor: 'black',
