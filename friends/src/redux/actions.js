@@ -32,7 +32,7 @@ export const getFriends = () => dispatch => {
       })
       .catch(err => {
          console.log('error', err)
-         dispatch( {type: SET_ERROR, payload: 'error fetching friends' })
+         dispatch({ type: SET_ERROR, payload: 'error fetching friends' })
       })
 }
 
