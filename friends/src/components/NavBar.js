@@ -13,7 +13,7 @@ const NavBar = () => {
                <img style={imgStyle} src={friendsLogo} alt='Lambda School Logo' />
             </div>
             <div style={navItems}>
-               <Link to='/friends' style={{ fontSize: '1.2rem', textDecoration: 'none', color: 'white' }}>List of Friends</Link>
+               <Link to='/friends' style={{ fontSize: '1.2rem', textDecoration: 'none', color: 'white' }}>See Friends</Link>
                <Link to='/' style={{ fontSize: '1.2rem', textDecoration: 'none', color: 'white' }}>Login</Link>
             </div>
          </div>
