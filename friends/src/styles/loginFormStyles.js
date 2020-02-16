@@ -20,7 +20,7 @@ export const inputStyle = {
    height: '40px',
    margin: 'auto',
    marginTop: '40px',
-   fontSize: '1.1rem'
+   fontSize: '1.1rem',
 }
 
 export const btnStyle = {
