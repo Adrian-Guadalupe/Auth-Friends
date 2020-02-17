@@ -26,7 +26,7 @@ const FriendsList = () => {
             {friends.length > 0 ? (
                friends.map(friend => {
                   return (
-                     <h3 key={friend.id}>{friend.name}</h3>
+                  <h3 key={friend.id}>{friend.name}</h3>
                   )
                })
             ) : (
